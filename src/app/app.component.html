@@ -1,0 +1,9 @@
+<div *ngIf="!loading">
+  <app-search (search)="onSearch($event)" [agencies]="agencies" [missions]="missions" [statuses]="statuses"></app-search>
+  <hr />
+  <app-launch-listing [launches]="launches" [searchStatus]="searchStatus"></app-launch-listing>
+</div>
+<div *ngIf="loading">
+  Cargando...
+</div>
+
